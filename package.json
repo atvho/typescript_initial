@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "e2e": "node -r ts-node/register ./node_modules/protractor/bin/protractor protractor.conf.ts",
+    "postinstall": "node node_modules/protractor/node_modules/webdriver-manager/bin/webdriver-manager update",
     "drivers:update": "node node_modules/protractor/node_modules/webdriver-manager/bin/webdriver-manager update",
-    "drivers:start": "node node_modules/protractor/node_modules/webdriver-manager/bin/webdriver-manager start",
+    "webdriver:start": "node node_modules/protractor/node_modules/webdriver-manager/bin/webdriver-manager start",
+    "e2e": "node -r ts-node/register ./node_modules/protractor/bin/protractor protractor.conf.ts",
     "test": "protractor"
   },
   "keywords": [],
